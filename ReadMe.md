@@ -1,49 +1,67 @@
-Setup for a small company
+Setup for a Small to Medium-Sized Company
 
-# 1. Plan 
+# 1. Plan
 
-The plan is to setup infrastructure for a small to medium-sized company. 
-<br>
-The infrastructure is to be a combination of both physical and virtual machines.
+The plan is to set up infrastructure for a small to medium-sized company.
+The infrastructure will be a combination of both physical and virtual machines.
 
-# 2. Needed hardware 
+# 2. Needed Hardware
 
-The Needed hardware is as followed:
+The needed hardware is as follows:
 
-* ```1 Firewall ```
-* ```2 Servers ```
-* ```1 Test pc  ```
+* 1 Firewall
+* 2 Servers
+* 1 Test PC
 
-<br>
 
-# 3. Needed software 
+# 3. Needed Software
 
-The needed software is as followed:
+The needed software is as follows:
 
 * OPNsense
-<br><br>
 * Windows Server 2022
-<br><br>
-* Hyper-v
-<br><br>
-
-# 4.  The setup
-
-The first server
-    
-* Install windows server 2022 
-    * Name the computer somthing smart
-    * Set ``static ip address``
-    * activate ``Hyper-v``
-    * activate ``Active Directory Domain Services``
-
-After a reboot of the server, the next step is to install the firewall.
-
-* Open Hyper-V manager and create a new virtual switch with a ``vlan ``
-    * Install ``OPNsense`` on a virtual machine 
-    * Configure the ``OPNsense`` to use the virtual switch created earlier
-    * Start the ``OPNsense`` virtual machine without secure boot 
-    * Finish the installation of ``OPNsense`` 
+* Hyper-V
 
 
+# 4. The Setup
 
+### First Server
+
+1. Install Windows Server 2022
+	* Name the computer (e.g., "Server1")
+	* Set a static IP address
+	* Activate Hyper-V
+	* Activate Active Directory Domain Services (ADDS)
+    * Activate Domain Name System (DNS)
+    * Activate Dynamic Host Configuration Protocol (DHCP)
+
+
+### After Rebooting the Server
+
+1. Install the Firewall
+	* Open Hyper-V Manager and create a new virtual switch with a VLAN
+	* Install OPNsense on a virtual machine
+	* Configure OPNsense to use 2 virtual switches. One of them needs a VLAN
+	* Start the OPNsense virtual machine without secure boot
+	* Finish the installation of OPNsense
+    * Make sure that the `Wan` does not have the `VLAN` tag
+  
+
+2. Configuration of the Active Directory Domain Services
+	* 
+
+### Second Server
+
+1. Install Windows Server 2022
+	* Name the computer (e.g., "Server2")
+	* Set a static IP address
+	* Activate Hyper-V
+	* Join the server to the Active Directory domain
+	* Configure disk redundancy (e.g., RAID 1)
+
+### Test PC
+
+1. Install a client operating system (e.g., Windows 10/11)
+	* Join the Domain 
+	* Do a internet speed test 
+	* Check the share folder
