@@ -46,16 +46,25 @@ The needed software is as follows:
 	* Remember to make OPNsense boot from disk 
   
 2. Configuration of the Active Directory Domain Services
- * Click on the flag at the top 
+ * Click on the flag at the top press promote domain
+    * Crete new forest and give your domain a name e.g kim.robbin
+    * Follow the wizard to create the domain
 
-### Second Server
+3. Confiur the DNS serves 
+
+4. Configure the DHCP 
+
+
+### Second Server (Backup)
 
 1. Install Windows Server 2022
  * Name the computer (e.g., "Server2")
  * Set a static IP address
  * Activate Hyper-V
  * Join the server to the Active Directory domain
- * Configure disk redundancy (e.g., RAID 1)
+
+
+2. Set up the dns and ADDS
 
 ### Test PC
 
@@ -72,6 +81,22 @@ The needed software is as follows:
 
 
 <img src="Images/Nettverk.png" width="700px"> 
+
+<br>
+<br>
+
+### 6. IP Documentation 
+
+| Device | IP Address | Subnet Mask | Default Gateway | VLAN ID | Exstern IP | 
+| --- | --- | --- | --- | --- | --- |
+| Server1 | 192.168.35.10 | 255.255.255.0 | 192.168.35.1 | 335 | 10.2.3.8 |
+| Server2 | 192.168.35.20 | 255.255.255.0 | 192.168.35.1 | 335 | 10.2.3.8 |
+| OPNsense | 192.168.35.1 | 255.255.255.0 | 192.168.35.1 | 335 | 10.2.3.8 |
+| Client 1 |  | 255.255.255.0 | 192.168.35.1 | 335 | 10.2.3.8
+
+
+
+
 
 
 ### Images 
