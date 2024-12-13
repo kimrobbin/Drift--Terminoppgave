@@ -28,8 +28,9 @@ The needed software is as follows:
 1. Install Windows Server 2022
  * Name the computer (e.g., "Server1")
  * Set a static IP address
- * Activate Hyper-V
- * Activate Active Directory Domain Services (ADDS)
+* Go to manage and add roles.
+    * Activate Hyper-V
+    * Activate Active Directory Domain Services (ADDS)
     * Activate Domain Name System (DNS)
     * Activate Dynamic Host Configuration Protocol (DHCP)
 
@@ -45,7 +46,7 @@ The needed software is as follows:
 	* Remember to make OPNsense boot from disk 
   
 2. Configuration of the Active Directory Domain Services
- * Go to mange and click roles and features
+ * Click on the flag at the top 
 
 ### Second Server
 
@@ -62,3 +63,29 @@ The needed software is as follows:
  * Join the Domain
  * Do a internet speed test
  * Check the share folder
+
+
+
+
+### 5.  The Network 
+
+
+
+<img src="Images/Nettverk.png" width="700px"> 
+
+
+### Images 
+
+![Dashboard](./Images/Start.png)
+
+<br>
+
+![Adding roles button](./Images/Roles.png)
+
+<br>
+
+![Selecting servises](./Images/Rolesselect.png)
+
+<br>
+
+![](./Images/Configur.png)
