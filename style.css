@@ -1,0 +1,64 @@
+/* Generelle stiler */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header-stil */
+.header {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Hovedinnhold */
+.bodyen {
+    padding: 20px;
+}
+
+/* Seksjoner for kontoer, grupper og OU */
+.account, .groups, .OU {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Overskrifter i seksjonene */
+h3 {
+    color: #333;
+    margin-bottom: 15px; /* Økt plass under overskriften */
+    font-size: 1.5em; /* Større skriftstørrelse for overskrifter */
+}
+
+/* Bilder */
+img {
+    max-width: 100%;
+    height: 600px;
+    display: block;
+    margin: 10px 0; /* Plass rundt bildene */
+}
+
+/* Footer-stil */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsiv design for bilder */
+.images, .Images1 {
+    display: flex;
+    flex-direction: column; /* Endret til kolonne for bedre responsivitet */
+    align-items: center; /* Sentrer bildene */
+    gap: 10px; /* Plass mellom bildene */
+}
